@@ -1,0 +1,141 @@
+.BoxContainer {
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.FormContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.MutedLink {
+    font-size: 0.8rem;
+    color: black;
+    font-weight: 500;
+    /* text-decoration: none; */
+}
+
+.BoldLink {
+    font-size: 0.8rem;
+    color:rgb(228, 155, 15);
+    font-weight: 600;
+    text-decoration: underline 2px;
+}
+
+.Input {
+    width: 100%;
+    height: 42px;
+    outline: none;
+    border: 1px solid rgba(12, 12, 12, 0.4);
+    padding: 0px 10px;
+    transition: all 200ms ease-in-out;
+    font-size: 12px;
+}
+
+.Input::placeholder {
+    color: rgba(200, 200, 200, 1);
+}
+
+.Input:focus {
+    outline: none;
+    border: 2px solid rgb(124, 124, 115);
+}
+
+
+.SubmitButton {
+    /* width: 100%; */
+    display: inline-block;
+    padding: 11px 40%;
+    border-radius: 10rem;
+    color: #fff;
+    font-size: 1rem;
+    letter-spacing: 0.15rem;
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    background-color: rgb(241, 196, 15);
+    border: none;
+    font-weight: 600;
+}
+
+.SubmitButton:after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: rgb(228, 155, 15);
+    border-radius: 10rem;
+    transition: all 0.7s;
+    z-index: -2;
+}
+
+.SubmitButton:hover:after {
+    width: 100%;
+}
+
+.GButton{
+line-height: 50px;
+    height: 50px;
+    text-align: center;
+    width: 250px;
+    cursor: pointer;
+    border: none;
+    color: #0c0b0b;
+    }
+.Gbtn{
+    color: #0c0b0b;
+        transition: all 0.3s;
+        position: relative;
+}
+.Gbtn::before{
+    content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        color: #0c0b0b;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        opacity: 0;
+        transition: all 0.3s;
+        border-top-width: 2px;
+        border-bottom-width: 2px;
+        border-top-style: solid;
+        border-bottom-style: solid;
+        border-top-color: rgb(228, 155, 15);
+        border-bottom-color: rgb(228, 155, 15);
+        transform: scale(0.1, 1);
+}
+.Gbtn:hover{
+    letter-spacing: 2px;
+}
+
+.Gbtn:hover::before {
+    opacity: 1;
+    transform: scale(1, 1);
+}
+
+.Gbtn::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    color: black;
+    transition: all 0.3s;
+}
+
+.Gbtn:hover::after {
+    opacity: 0;
+    transform: scale(0.1, 1);
+}
