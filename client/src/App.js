@@ -1,12 +1,9 @@
-import { Routes, Route, BrowserRouter,Navigate } from 'react-router-dom';
+import { Routes, BrowserRouter } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
-import Home from './Components/Home';
 import './App.css';
 import { AccountBox } from './Components/accountBox';
 import styles from './stylesheets/Container.module.css';
-import { LogIn } from './Components/accountBox/LogIn';
-import { SignUp } from './Components/accountBox/SignUp';
 
 function App() {
   const [user, setUser] = useState(null);
