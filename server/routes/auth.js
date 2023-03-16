@@ -20,8 +20,11 @@ router.get('/login/failed', (req, res) => {
   });
 });
 
+// STEP 1 -- making get request
 router.get('/google', passport.authenticate('google', ['profile', 'email']));
 
+//STEP 3 - doing something once get authenticated
+//if success or error we run callback
 router.get(
   '/google/callback',
   passport.authenticate('google', {
@@ -32,7 +35,7 @@ router.get(
 
 router.get('/logout', (req, res) => {
   req.logout();
-  res.redirect(process.env.CLIENT_URL);
+  res.redirect(`${process.env.CLIENT_URL}`);
 });
 
 module.exports = router;

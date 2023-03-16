@@ -18,36 +18,36 @@ const ani_content = {
 
 const Home = ({ userDetails }) => {
   const user = userDetails;
-  console.log(user);
+  // console.log("user",user.picture);
   const logout = () => {
     window.open('http://localhost:8080/auth/logout', '_self');
   };
   return (
-      <motion.div variants={ani_content} className={formstyles.BoxContainer}>
-        <div className={styles.FormContainer}>
-          <img
-            className={styles.profile_img}
-            src={user.picture}
-            alt='profile img'
-          />
-          <div className={styles.showdetails}>
-            <label>Name:</label>
-            <p className={styles.text}>{user.name}</p>
-          </div>
-          <div className={styles.showdetails}>
-            <label> Email:</label>
-            <p className={styles.text}>{user.email}</p>
-          </div>
+    <motion.div variants={ani_content} className={formstyles.BoxContainer}>
+      <div className={styles.FormContainer}>
+        <img
+          className={styles.profile_img}
+          src={user.picture}
+          alt='profile img'
+        />
+        <div className={styles.showdetails}>
+          <label>Name:</label>
+          <p className={styles.text}>{user.name}</p>
         </div>
-        <Marginer direction='vertical' margin={10} />
-        <button
-          onClick={logout}
-          className={formstyles.SubmitButton}
-          type='submit'
-        >
-          Logout
-        </button>
-      </motion.div>
+        <div className={styles.showdetails}>
+          <label> Email:</label>
+          <p className={styles.text}>{user.email}</p>
+        </div>
+      </div>
+      <Marginer direction='vertical' margin={10} />
+      <button
+        onClick={logout}
+        className={formstyles.SubmitButton}
+        type='submit'
+      >
+        Logout
+      </button>
+    </motion.div>
   );
 };
 
